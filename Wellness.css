@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f3ff;
+    color: #30294a;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 38px;
+    color: #8565c9;
+}
+
+header p {
+    color: #888;
+    margin-top: 10px;
+}
+
+.welcome,
+.mood-section,
+.journal,
+.stats,
+.history {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px #00000008;
+}
+
+.welcome {
+    background: linear-gradient(120deg, #e9e1ff, #fce8f2);
+}
+
+.welcome h2 {
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #766b8d;
+}
+
+h2 {
+    margin-bottom: 18px;
+}
+
+.moods {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.moods button {
+    background: #f5f1ff;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 15px 5px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.moods button span {
+    display: block;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.moods button:hover,
+.moods button.active {
+    border-color: #9876df;
+    background: #eee6ff;
+}
+
+#selectedMood {
+    margin-top: 18px;
+    color: #8565c9;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    resize: vertical;
+    font-family: inherit;
+    outline-color: #9876df;
+}
+
+.save-btn {
+    background: #8565c9;
+    color: white;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 9px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 12px;
+    color: #26966b;
+}
+
+#summary {
+    color: #75678f;
+    line-height: 2;
+}
+
+.history-item {
+    background: #f8f5ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.history-item p {
+    margin-top: 7px;
+    color: #777;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.history-item button {
+    margin-top: 10px;
+    border: none;
+    background: #eee4ff;
+    color: #7956bd;
+    padding: 7px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    color: #999;
+    padding: 20px;
+    line-height: 2;
+}
+
+@media(max-width: 600px) {
+    .moods {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .welcome,
+    .mood-section,
+    .journal,
+    .stats,
+    .history {
+        padding: 18px;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMI Planner</title>
+  <link rel="stylesheet" href="Planner.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">LUMI<span>.</span></div>
+      <div class="date-display" id="todayDate"></div>
+    </header>
+
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL SPACE</p>
+        <h1>Plan your day,<br><span>your way.</span></h1>
+        <p class="subtitle">Small steps today, big achievements tomorrow.</p>
+      </div>
+      <div class="welcome-icon">✦</div>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card">
+        <p>Total tasks</p>
+        <h2 id="totalTasks">0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Completed</p>
+        <h2 id="completedTasks">0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Remaining</p>
+        <h2 id="remainingTasks">0</h2>
+      </div>
+    </section>
+
+    <section class="progress-card">
+      <div class="progress-heading">
+        <h3>Daily progress</h3>
+        <span id="progressText">0%</span>
+      </div>
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+      <p>Keep going. Every completed task counts!</p>
+    </section>
+
+    <main class="planner-layout">
+      <section class="task-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">STAY ORGANIZED</p>
+            <h2>My tasks</h2>
+          </div>
+        </div>
+
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="today">Today</button>
+          <button class="filter" data-filter="upcoming">Upcoming</button>
+          <button class="filter" data-filter="completed">Completed</button>
+        </div>
+
+        <div id="taskList" class="task-list"></div>
+      </section>
+
+      <aside class="add-section">
+        <h2>Create a task ✨</h2>
+        <p class="form-subtitle">Make your next step happen.</p>
+
+        <form id="taskForm">
+          <label for="taskTitle">Task name</label>
+          <input type="text" id="taskTitle" placeholder="e.g. Study engineering maths" required maxlength="100">
+
+          <label for="taskDate">Deadline</label>
+          <input type="date" id="taskDate" required>
+
+          <label for="taskPriority">Priority</label>
+          <select id="taskPriority">
+            <option value="Low">Low</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="High">High</option>
+          </select>
+
+          <label for="taskNote">Notes (optional)</label>
+          <textarea id="taskNote" placeholder="Add a little detail..." rows="3" maxlength="300"></textarea>
+
+          <button type="submit" class="add-button">+ Add task</button>
+        </form>
+      </aside>
+    </main>
+
+    <footer>Made with care by <strong>LUMI</strong> ✦</footer>
+  </div>
+
+  <script src="Planner.js"></script>
+</body>
+</html>

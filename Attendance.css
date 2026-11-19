@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fdfcfe;
+    color: #18233c;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 35px;
+    color: #8068aa;
+}
+
+header p {
+    color: #777;
+    margin-top: 8px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000008;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #777;
+}
+
+.card h2 {
+    font-size: 28px;
+    margin-top: 12px;
+    color: #8068aa;
+}
+
+.calendar,
+.attendance-panel {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px #00000008;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.calendar-header button {
+    border: none;
+    background: #8068aa;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.weekdays,
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.weekdays div {
+    text-align: center;
+    font-weight: bold;
+    color: #777;
+    padding: 10px 0;
+}
+
+.day {
+    min-height: 65px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    padding: 8px;
+    text-align: center;
+}
+
+.day:hover {
+    border-color: #8068aa;
+}
+
+.day small {
+    display: block;
+    font-size: 10px;
+    margin-top: 7px;
+}
+
+.Present {
+    background: #8068aa;
+    color: #138653;
+}
+
+.Absent {
+    background: #ffe0e3;
+    color: #d43e4d;
+}
+
+.Holiday {
+    background: #fff0cc;
+    color: #ad7817;
+}
+
+.selected {
+    outline: 2px solid #8068aa;
+}
+
+.attendance-panel h2 {
+    margin-bottom: 12px;
+}
+
+#selectedDate {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.buttons button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.present-btn {
+    background: #d9f8e9;
+    color: #138653;
+}
+
+.absent-btn {
+    background: #ffe0e3;
+    color: #d43e4d;
+}
+
+.holiday-btn {
+    background: #fff0cc;
+    color: #ad7817;
+}
+
+.clear-btn {
+    background: #eee;
+    color: #555;
+}
+
+@media(max-width: 650px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .calendar {
+        padding: 12px;
+    }
+
+    .days {
+        gap: 4px;
+    }
+
+    .day {
+        min-height: 55px;
+        padding: 5px 2px;
+        font-size: 12px;
+    }
+
+    .day small {
+        font-size: 8px;
+    }
+}

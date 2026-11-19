@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f7f6fc;
+    color: #25233b;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 35px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #8068ce;
+    letter-spacing: -1.5px;
+}
+
+.logo span {
+    color: #b49ce9;
+}
+
+.subtitle {
+    color: #9691a8;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tag {
+    display: inline-block;
+    background: #eee9fb;
+    color: #8068ce;
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.intro h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(27px, 5vw, 39px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.intro p {
+    color: #89869c;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    background: white;
+    padding: 19px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px #4e397808;
+}
+
+.stat span {
+    color: #9993ab;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.stat h2 {
+    font-family: 'Manrope', sans-serif;
+    color: #8068ce;
+    font-size: 27px;
+    margin-top: 5px;
+}
+
+.game-card {
+    background: white;
+    padding: 23px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px #4e39780a;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.game-header h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+}
+
+.game-header span {
+    font-size: 11px;
+    color: #8d80b5;
+}
+
+#gameArea {
+    height: 340px;
+    background: linear-gradient(135deg, #f3efff, #fdf1f8);
+    border: 1px solid #eee6fc;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-message {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+}
+
+.big-bubble {
+    font-size: 65px;
+    margin-bottom: 10px;
+}
+
+.welcome-message h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+}
+
+.welcome-message p {
+    color: #9993ab;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.start-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 14px 28px;
+    background: #8068ce;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.start-btn:hover {
+    background: #6c54b9;
+    transform: translateY(-2px);
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #ffffffbb;
+    cursor: pointer;
+    animation: float 2s ease-in-out infinite alternate;
+    box-shadow: inset -5px -7px 12px #8068ce18,
+                0 5px 15px #8068ce20;
+}
+
+.bubble:hover {
+    filter: brightness(1.04);
+}
+
+.bubble:active {
+    transform: scale(.8);
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-9px); }
+}
+
+.pop {
+    animation: pop .18s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes pop {
+    to {
+        transform: scale(1.7);
+        opacity: 0;
+    }
+}
+
+.tip {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    background: #eee9fb;
+    padding: 18px;
+    border-radius: 14px;
+    margin-top: 18px;
+}
+
+.tip span {
+    font-size: 25px;
+}
+
+.tip h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+}
+
+.tip p {
+    font-size: 12px;
+    color: #827b99;
+    margin-top: 4px;
+}
+
+footer {
+    text-align: center;
+    color: #aaa4b9;
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+@media(max-width: 550px) {
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .game-card {
+        padding: 14px;
+    }
+
+    #gameArea {
+        height: 370px;
+    }
+
+    .stat {
+        padding: 14px 5px;
+    }
+
+    .stat h2 {
+        font-size: 22px;
+    }
+}

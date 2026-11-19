@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumi - Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <aside class="sidebar">
+            <h1 class="logo">✦ Lumi</h1>
+
+            <p class="menu-title">MENU</p>
+            <nav>
+                <a href="#home" class="active">⌂ Home</a>
+                <a href="C:\Users\Imtyaz\Favorites\lumi\Attendance.html">▣ Attendance</a>
+                <a href="C:\Users\Imtyaz\Favorites\lumi\Planner.html">▢My planner</a>
+                <a href="C:\Users\Imtyaz\Favorites\lumi\Reminder.html">🔔Reminder</a>
+                <a href="C:\Users\Imtyaz\Favorites\lumi\Wellness.html">💊Wellness</a>
+                <a href="C:\Users\Imtyaz\Favorites\lumi\Play.html">🧩Play zone</a>
+            </nav>
+
+            <div class="quote">
+                <span>✧ Daily reminder</span>
+                <p>"Small steps every day lead to big results."</p>
+            </div>
+        </aside>
+
+        <main class="main">
+
+            <header>
+                <div>
+                    <p class="date" id="today"></p>
+                    <h2>Good day, Student! ☁️</h2>
+                    <p class="subtitle">Let's make today productive.</p>
+                </div>
+                <div class="profile">L</div>
+            </header>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <span>📚 Total Tasks</span>
+                    <h2 id="totalTasks">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>✓ Completed</span>
+                    <h2 id="completedTasks">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <span>✧ Progress</span>
+                    <h2 id="progress">0%</h2>
+                </div>
+            </section>
+
+            <section class="content-grid">
+
+                <div class="panel" id="tasks">
+                    <div class="section-heading">
+                        <div>
+                            <h3>My Study Tasks</h3>
+                            <p>Your little goals for today ✨</p>
+                        </div>
+                    </div>
+
+                    <div class="task-input">
+                        <input type="text" id="taskInput"
+                            placeholder="What do you want to study?">
+
+                        <select id="subject">
+                            <option value="Mathematics">Math</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Programming">Programming</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <button id="addTask">+</button>
+                    </div>
+
+                    <div id="taskList"></div>
+                </div>
+
+                <div class="panel timer-panel" id="timer">
+                    <h3>Focus Session</h3>
+                    <p>Take a deep breath and focus.</p>
+
+                    <div class="timer-circle">
+                        <span id="timerDisplay">25:00</span>
+                    </div>
+
+                    <div class="timer-buttons">
+                        <button id="startTimer">Start</button>
+                        <button id="resetTimer">Reset</button>
+                    </div>
+
+                    <p class="timer-note">✧ One step at a time.</p>
+                </div>
+
+            </section>
+
+            <footer>
+                Made with ♡ by Lumi · Your little study companion
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
